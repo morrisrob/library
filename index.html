@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <h2>Library</h2>
+        <table id='libraryTable'></table>
+        <h2>Add Book to Library</h2>
+        <form method="post" onsubmit="addBook()">
+            Title:<br>
+            <input type="text" id="title" name="title" value="title">
+            <br>
+            Author:<br>
+            <input type="text" name="author" id="author" value="author">
+            <br>
+            Pages:<br>
+            <input type="text" name="pages" id="pages" value="pages">
+            <br>
+            Read?<br>
+            <input type="radio" name="read" id="readYes" value="yes" checked=true> Yes
+            <input type="radio" name="read" id="readNo" value="no"> No
+            <br><br>
+            <input type="button" onclick="addBook()" value="Submit">
+        </form>
+        <script src="app.js"></script>
+    </body>
+</html>
