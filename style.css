@@ -1,0 +1,42 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  /* border: 2px dashed rgba(236, 198, 48, 0.5); */
+}
+
+.container header {
+  grid-area: 1/1/2/3;
+  /* border: 2px dashed rgba(236, 198, 48, 0.5); */
+}
+
+.container main {
+  grid-area: 2/1/3/2;
+  /* border: 2px dashed rgba(236, 198, 48, 0.5); */
+}
+
+.container aside {
+  grid-area: 2/2/3/3;
+  /* border: 2px solid black; */
+}
+
+.container footer {
+  grid-area: 3/1/4/3;
+  /* border: 2px dashed rgba(236, 198, 48, 0.5); */
+}
+
+table {
+    width: auto;
+    table-layout: fixed;
+}
+
+table, th {
+    text-align: left;
+}
+
+table tr:nth-child(even) {
+    background: silver;
+}

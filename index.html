@@ -9,31 +9,41 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <h2>Library</h2>
-        <table id='libraryTable'></table>
-        <h2>Add Book to Library</h2>
-        <form method="post" onsubmit="addBook()">
-            Title:<br>
-            <input type="text" id="title" name="title" value="title">
-            <br>
-            Author:<br>
-            <input type="text" name="author" id="author" value="author">
-            <br>
-            Pages:<br>
-            <input type="text" name="pages" id="pages" value="pages">
-            <br>
-            Read?<br>
-            <input type="radio" name="read" id="readYes" value="yes" checked=true> Yes
-            <input type="radio" name="read" id="readNo" value="no"> No
-            <br><br>
-            <input type="button" onclick="addBook()" value="Submit">
-        </form>
+        <div class = 'container'>
+            <header>
+                <h2>Odin Project Library Assignment</h2>
+            </header>
+            <main>
+                <h3>Library</h3>
+                <table width= 600 id='libraryTable'>
+                </table>
+            </main>
+            <aside>
+                <h3>Add Book to Library</h3>
+                <form method="post" onsubmit="addBook()">
+                    Title:<br>
+                    <input type="text" id="title" name="title" size="50" value="title">
+                    <br>
+                    Author:<br>
+                    <input type="text" name="author" id="author" size="50" value="author">
+                    <br>
+                    Pages:<br>
+                    <input type="number" name="pages" maxlength="4" size="4" id="pages" value="pages">
+                    <br>
+                    Read?<br>
+                    <input type="radio" name="read" id="readYes" value="yes" checked=true> Yes
+                    <input type="radio" name="read" id="readNo" value="no"> No
+                    <br><br>
+                    <input type="button" onclick="addBook()" value="Submit">
+                </form>
+            </aside>
+        </div>
         <script src="app.js"></script>
     </body>
 </html>

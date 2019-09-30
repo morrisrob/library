@@ -1,7 +1,6 @@
 let myLibrary = [];
 
 function Book(title, author, pages, read) {
-    // this.recordNum = recordNum
     this.title = title;
     this.author = author;
     this.pages = pages;
@@ -16,7 +15,7 @@ function clearTable() {
 }
 
 function buildHeader() {
-    let header = ['Index', 'Title', 'Author', 'Read?', 'Status'];
+    let header = ['Title', 'Author', 'Pages', 'Read?', "Delete", "Change Status"];
     let table = document.getElementById('libraryTable');
     let row = table.insertRow(-1);
     let columnCount = header.length;
@@ -25,6 +24,7 @@ function buildHeader() {
         let headerCell = document.createElement("TH");
         headerCell.innerHTML = header[i];
         row.appendChild(headerCell);
+        headerCell.style.width = '150px';
     }
 }
 
@@ -38,13 +38,14 @@ function displayBooks() {
         let columnCount = 4;
         let row = table.insertRow(-1);
 
-        let cell = row.insertCell();
-        cell.innerHTML = myLibrary[i].recordNum;
-        cell.innerHTML = i;
+        // let cell = row.insertCell();
+        // cell.innerHTML = myLibrary[i].recordNum;
+        // cell.innerHTML = i;
 
         for (j = 0; j < columnCount; j++) {
             let cell = row.insertCell(-1);
             cell.innerHTML = myLibrary[i][propertyNames[j]];
+            // cell.style.width = '100px';
         }
 
         cell = row.insertCell();
