@@ -28,19 +28,19 @@
                 <h3>Add Book to Library</h3>
                 <form method="post" onsubmit="addBook()">
                     Title:<br>
-                    <input type="text" id="title" name="title" size="50" value="title">
+                    <input type="text" id="title" name="title" size="50" placeholder="Title" required >
                     <br>
                     Author:<br>
-                    <input type="text" name="author" id="author" size="50" value="author">
+                    <input type="text" name="author" id="author" size="50" placeholder="Author" required >
                     <br>
                     Pages:<br>
-                    <input type="number" name="pages" maxlength="4" size="4" id="pages" value="pages">
+                    <input type="number" name="pages" maxlength="4" size="4" id="pages" placeholder="Pages" required >
                     <br>
                     Read?<br>
                     <input type="radio" name="read" id="readYes" value="yes" checked=true> Yes
                     <input type="radio" name="read" id="readNo" value="no"> No
                     <br><br>
-                    <input type="button" onclick="addBook()" value="Submit">
+                    <input type="submit" onsubmit="return addBook();" value="Submit">
                 </form>
             </aside>
         </div>

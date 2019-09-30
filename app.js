@@ -90,6 +90,7 @@ function recordCounter() {
 }
 
 function addBook() {
+    event.preventDefault(); 
     let readValue;
     let titleValue = document.getElementById('title').value;
     let authorValue = document.getElementById('author').value;
